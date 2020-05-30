@@ -144,7 +144,7 @@ the "Active-Power" endpoint :
 ```
 {
   'message': "No previous simulation has been calculated",
-  'status': "error"
+  'status': "404"
 }
 ```
 
@@ -156,7 +156,7 @@ the "Active-Power" endpoint :
 ```
 {
   'message': "No previous simulation has been calculated",
-  'status': "error"
+  'status': "404"
 }
 ```
 
