@@ -84,7 +84,7 @@ You can use the API in this way in order to retrieve the following information:
 
 ### Power flow Simulation
 
-Endpoint that launches the simulation using the PandaPower Python module. The response include the active and reactive power of the load in JSON format.
+Endpoint that launches the simulation using the PandaPower Python module. The response includes the active and reactive power of the load in JSON format.
 
 
 ```
