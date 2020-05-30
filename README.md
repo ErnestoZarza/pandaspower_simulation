@@ -18,7 +18,7 @@ This application was implemented using the following technologies:
 ## Requirements
 
 * Python 3.x.x
-* Django 2.x.x
+* Django >= 2.2.10
 * DRF 
 * PandaPower
 
