@@ -78,11 +78,11 @@ $ docker-compose down
 ```
 <br/>
 
-### API
+## API
 
 You can use the API in this way in order to retrieve the following information:
 
-#### Power flow Simulation
+### Power flow Simulation
 
 Endpoint that launches the simulation using the PandaPower Python module. The response include the active and reactive power of the load in JSON format.
 
@@ -100,7 +100,7 @@ POST http://0.0.0.0:8000/pandapower_api/simulation/create/
 }
 ```
 
-#### Active-Power
+### Active-Power
 
 Endpoint to retrieve the active power of the previously executed simulation.
 
@@ -117,7 +117,7 @@ GET http://0.0.0.0:8000/pandapower_api/simulation/active/
 }
 ```
 
-#### Reactive-Power
+### Reactive-Power
 
 Endpoint to  retrieve the reactive power of the previously executed simulation.
 
@@ -134,7 +134,7 @@ GET http://0.0.0.0:8000/pandapower_api/simulation/reactive/
 }
 ```
 
-#### Error cases
+### Error cases
 
 ##### Example 1: No previous active power
 
