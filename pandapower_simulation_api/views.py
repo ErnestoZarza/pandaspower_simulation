@@ -17,7 +17,10 @@ class ActivePowerView(generics.RetrieveAPIView):
             'status': status.HTTP_404_NOT_FOUND
         }
 
-        active_power = request.session['active_power']
+        try:
+            active_power = request.session['active_power']
+        except KeyError:
+            active_power = None
 
         if active_power is not None:
             response_data = {
@@ -40,7 +43,11 @@ class ReactivePowerView(generics.RetrieveAPIView):
             'status': status.HTTP_404_NOT_FOUND
         }
 
-        reactive_power = request.session['reactive_power']
+        try:
+            reactive_power = request.session['reactive_power']
+        except KeyError:
+            reactive_power = None
+
 
         if reactive_power is not None:
             response_data = {
