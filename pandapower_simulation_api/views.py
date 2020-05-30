@@ -7,13 +7,14 @@ from .simulation import run_simulation
 
 class ActivePowerView(generics.RetrieveAPIView):
     """
+        Endpoint to retrieve the active power of the previously executed simulation.
         GET http://0.0.0.0:8000/pandapower_api/simulation/active/
     """
 
     def get(self, request, *args, **kwargs):
         response_data = {
-            'message': "No previous simulation",
-            'satatus': status.HTTP_404_NOT_FOUND
+            'message': "No previous simulation has been calculated",
+            'status': status.HTTP_404_NOT_FOUND
         }
 
         active_power = request.session['active_power']
@@ -29,13 +30,14 @@ class ActivePowerView(generics.RetrieveAPIView):
 
 class ReactivePowerView(generics.RetrieveAPIView):
     """
+        Endpoint to retrieve the reactive power of the previously executed simulation.
         GET http://0.0.0.0:8000/pandapower_api/simulation/reactive/
     """
 
     def get(self, request, *args, **kwargs):
         response_data = {
-            'message': "No previous simulation",
-            'satatus': status.HTTP_404_NOT_FOUND
+            'message': "No previous simulation has been calculated",
+            'status': status.HTTP_404_NOT_FOUND
         }
 
         reactive_power = request.session['reactive_power']
@@ -51,7 +53,10 @@ class ReactivePowerView(generics.RetrieveAPIView):
 
 class SimulationView(APIView):
 
-    """ POST: http://0.0.0.0:8000/pandapower_api/simulation/create/"""
+    """
+        Endpoint that launches the simulation using the PandaPower Python module
+        POST: http://0.0.0.0:8000/pandapower_api/simulation/create/
+    """
 
     def post(self, request, *args, **kwargs):
 
